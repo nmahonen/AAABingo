@@ -1,0 +1,86 @@
+[debug] [2024-09-11T11:06:50.041Z] ----------------------------------------------------------------------
+[debug] [2024-09-11T11:06:50.045Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\OMISTAJA\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2024-09-11T11:06:50.046Z] CLI Version:   13.16.0
+[debug] [2024-09-11T11:06:50.046Z] Platform:      win32
+[debug] [2024-09-11T11:06:50.047Z] Node Version:  v20.17.0
+[debug] [2024-09-11T11:06:50.047Z] Time:          Wed Sep 11 2024 14:06:50 GMT+0300 (Itä-Euroopan kesäaika)
+[debug] [2024-09-11T11:06:50.047Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-11T11:06:50.152Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-11T11:06:50.155Z] > authorizing via signed-in user (niinamhn@gmail.com)
+[debug] [2024-09-11T11:06:50.156Z] [iam] checking project vks-bingo for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-09-11T11:06:50.160Z] > refreshing access token with scopes: []
+[debug] [2024-09-11T11:06:50.165Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-09-11T11:06:50.166Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-11T11:06:50.361Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-09-11T11:06:50.362Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-11T11:06:50.382Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vks-bingo:testIamPermissions [none]
+[debug] [2024-09-11T11:06:50.385Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vks-bingo:testIamPermissions x-goog-quota-user=projects/vks-bingo
+[debug] [2024-09-11T11:06:50.387Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vks-bingo:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-11T11:06:51.212Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vks-bingo:testIamPermissions 200
+[debug] [2024-09-11T11:06:51.214Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vks-bingo:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-11T11:06:51.221Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vks-bingo [none]
+[debug] [2024-09-11T11:06:51.534Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vks-bingo 200
+[debug] [2024-09-11T11:06:51.535Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vks-bingo {"projectId":"vks-bingo","projectNumber":"291471155826","displayName":"VKS-Bingo","name":"projects/vks-bingo","resources":{"hostingSite":"vks-bingo"},"state":"ACTIVE","etag":"1_a4a4da3f-ab16-4b4e-a137-8e7efded97fb"}
+[info] 
+[info] === Deploying to 'vks-bingo'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-09-11T11:06:51.551Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions [none]
+[debug] [2024-09-11T11:06:51.552Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-09-11T11:06:53.244Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions 200
+[debug] [2024-09-11T11:06:53.245Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions {"name":"projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[vks-bingo]: beginning deploy... 
+[info] i  hosting[vks-bingo]: found 1 files in public 
+[debug] [2024-09-11T11:06:53.291Z] [hosting] uploading with 200 concurrency
+[debug] [2024-09-11T11:06:53.308Z] [hosting] hash cache [cHVibGlj] stored for 1 files
+[debug] [2024-09-11T11:06:53.309Z] [hosting][hash queue][FINAL] {"max":2,"min":2,"avg":2,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":14}
+[debug] [2024-09-11T11:06:53.322Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b:populateFiles [none]
+[debug] [2024-09-11T11:06:53.330Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b:populateFiles {"files":{"/index.html":"d9d7bc4ab8a92b15cc2009280fe4aea0d497560fe7b84d597ebcd2ad04f7c317"}}
+[debug] [2024-09-11T11:06:53.763Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b:populateFiles 200
+[debug] [2024-09-11T11:06:53.764Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/vks-bingo/versions/a0b8a5e0c34dd68b/files"}
+[debug] [2024-09-11T11:06:53.768Z] [hosting][populate queue][FINAL] {"max":471,"min":471,"avg":471,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":471}
+[debug] [2024-09-11T11:06:53.770Z] [hosting] uploads queued: 0
+[debug] [2024-09-11T11:06:53.772Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1726052813772}
+[info] i  hosting: upload complete 
+[info] +  hosting[vks-bingo]: file upload complete 
+[debug] [2024-09-11T11:06:53.780Z] [hosting] deploy completed after 528ms
+[debug] [2024-09-11T11:06:53.782Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "vks-bingo"
+    },
+    "version": "projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b"
+  }
+]
+[info] i  hosting[vks-bingo]: finalizing version... 
+[debug] [2024-09-11T11:06:53.808Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions/a0b8a5e0c34dd68b updateMask=status%2Cconfig
+[debug] [2024-09-11T11:06:53.809Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions/a0b8a5e0c34dd68b {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-09-11T11:06:54.455Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions/a0b8a5e0c34dd68b 200
+[debug] [2024-09-11T11:06:54.457Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/versions/a0b8a5e0c34dd68b {"name":"projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-09-11T11:06:52.420581Z","createUser":{"email":"NiinaMhn@gmail.com"},"finalizeTime":"2024-09-11T11:06:54.185064Z","finalizeUser":{"email":"NiinaMhn@gmail.com"}}
+[debug] [2024-09-11T11:06:54.461Z] [hosting] finalized version for vks-bingo:[object Object]
+[info] +  hosting[vks-bingo]: version finalized 
+[info] i  hosting[vks-bingo]: releasing new version... 
+[debug] [2024-09-11T11:06:54.468Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/channels/live/releases versionName=projects%2F291471155826%2Fsites%2Fvks-bingo%2Fversions%2Fa0b8a5e0c34dd68b
+[debug] [2024-09-11T11:06:54.470Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/channels/live/releases {}
+[debug] [2024-09-11T11:06:55.176Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/channels/live/releases 200
+[debug] [2024-09-11T11:06:55.178Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vks-bingo/channels/live/releases {"name":"projects/291471155826/sites/vks-bingo/channels/live/releases/1726052814195000","version":{"name":"projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-09-11T11:06:52.420581Z","createUser":{"email":"NiinaMhn@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKBS5McEQjzitqv2gpjG-Nz66GF7gePJ0IQ_8luueT8_AS4=mo"},"finalizeTime":"2024-09-11T11:06:54.185064Z","finalizeUser":{"email":"NiinaMhn@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKBS5McEQjzitqv2gpjG-Nz66GF7gePJ0IQ_8luueT8_AS4=mo"}},"type":"DEPLOY","releaseTime":"2024-09-11T11:06:54.195Z","releaseUser":{"email":"NiinaMhn@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKBS5McEQjzitqv2gpjG-Nz66GF7gePJ0IQ_8luueT8_AS4=mo"}}
+[debug] [2024-09-11T11:06:55.184Z] [hosting] release: {"name":"projects/291471155826/sites/vks-bingo/channels/live/releases/1726052814195000","version":{"name":"projects/291471155826/sites/vks-bingo/versions/a0b8a5e0c34dd68b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-09-11T11:06:52.420581Z","createUser":{"email":"NiinaMhn@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKBS5McEQjzitqv2gpjG-Nz66GF7gePJ0IQ_8luueT8_AS4=mo"},"finalizeTime":"2024-09-11T11:06:54.185064Z","finalizeUser":{"email":"NiinaMhn@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKBS5McEQjzitqv2gpjG-Nz66GF7gePJ0IQ_8luueT8_AS4=mo"}},"type":"DEPLOY","releaseTime":"2024-09-11T11:06:54.195Z","releaseUser":{"email":"NiinaMhn@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKBS5McEQjzitqv2gpjG-Nz66GF7gePJ0IQ_8luueT8_AS4=mo"}}
+[info] +  hosting[vks-bingo]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/vks-bingo/overview
+[info] Hosting URL: https://vks-bingo.web.app
