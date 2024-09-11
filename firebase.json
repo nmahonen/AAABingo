@@ -1,0 +1,10 @@
+{
+    "hosting": {
+      "public": "AAABingo",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  }
